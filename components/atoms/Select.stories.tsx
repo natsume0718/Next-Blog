@@ -13,4 +13,4 @@ const options: Option[] = [
   { value: '2', text: 'second' },
 ]
 
-export const Danger: Story = () => <Select options={options} name="select"></Select>
+export const DefaultSelect: Story = () => <Select options={options} name="select"></Select>
