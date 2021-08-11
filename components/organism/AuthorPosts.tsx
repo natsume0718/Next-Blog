@@ -1,0 +1,36 @@
+import { NamedAvatar, NamedAvatarProps } from '../molecule/NamedAvatar'
+import { CreatedPosts, CreatedPostsProps } from '../atoms/CreatedPosts'
+import { Card } from '../atoms/Card'
+
+export type Author = NamedAvatarProps & CreatedPostsProps
+
+export interface AuthorProps {
+  authors: Author[]
+}
+
+export function AuthorPosts({ authors }: AuthorProps) {
+  return (
+    <Card>
+      <ul className="flex flex-col items-start justify-center">
+        {authors.map((author, index) => {
+          return (
+            <li
+              key={index}
+              className={`inline-flex list-none justify-center items-center ${
+                index !== 0 ? 'mt-6' : 'mt-6'
+              }`}
+            >
+              <NamedAvatar
+                src={author.src}
+                alt={author.alt}
+                circle={true}
+                name={author.name}
+              ></NamedAvatar>
+              <CreatedPosts counts={author.counts} className="ml-2"></CreatedPosts>
+            </li>
+          )
+        })}
+      </ul>
+    </Card>
+  )
+}
