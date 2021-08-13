@@ -8,6 +8,9 @@ export default {
   component: UnderLineText,
 } as Meta
 
+export const DefaultUnderLine: Story = () => (
+  <UnderLineText text="こんにちは" className={`text-${themeColor}-700`} />
+)
 export const DefaultUnderLineBold: Story = () => (
   <UnderLineText text="こんにちは" className={`text-${themeColor}-700 font-bold`} />
 )
