@@ -8,5 +8,5 @@ export default {
 } as Meta
 
 export const DefaultNamedAvatar: Story = () => (
-  <NamedAvatar src="/man.jpeg" circle={true} name="山田太郎"></NamedAvatar>
+  <NamedAvatar src="/man.jpeg" circle={true} name="山田太郎" />
 )

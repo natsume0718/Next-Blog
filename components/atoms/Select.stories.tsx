@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react'
 import { Option, Select } from './Select'
 
 export default {
-  title: 'Select',
+  title: 'atoms/Select',
   component: Select,
 } as Meta
 
@@ -13,4 +13,4 @@ const options: Option[] = [
   { value: '2', text: 'second' },
 ]
 
-export const DefaultSelect: Story = () => <Select options={options} name="select"></Select>
+export const DefaultSelect: Story = () => <Select options={options} name="select" />

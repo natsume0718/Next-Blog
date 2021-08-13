@@ -1,14 +1,15 @@
-import { themeColor } from '../../config'
+import colors from 'tailwindcss/colors'
 
 export interface FoldingProps {
   className?: string
+  color: keyof typeof colors
 }
 
-export function Folding({ className }: FoldingProps) {
+export function Folding({ color, className }: FoldingProps) {
   return (
     <button
       type="button"
-      className={`block text-${themeColor}-800 hover:text-${themeColor}-600 focus:text-${themeColor}-600 focus:outline-none ${
+      className={`block text-${color}-800 hover:text-${color}-600 focus:text-${color}-600 focus:outline-none ${
         className || ''
       }`}
     >

@@ -1,8 +1,6 @@
 import { Avatar, AvatarProps } from '../atoms/Avatar'
-import Link from 'next/link'
 import React from 'react'
-import { themeColor } from '../../config'
-import { UnderLineBoldText } from '../atoms/UnderLineBoldText'
+import { UnderLineText } from '../atoms/UnderLineText'
 
 export interface INamed {
   name: string
@@ -16,11 +14,7 @@ export function NamedAvatar(props: NamedAvatarProps) {
   return (
     <React.Fragment>
       <Avatar src={props.src} alt={props.alt} circle={props.circle}></Avatar>
-      <UnderLineBoldText
-        text={props.name}
-        className={props.className}
-        detailLink={props.detailLink}
-      ></UnderLineBoldText>
+      <UnderLineText text={props.name} className={props.className} detailLink={props.detailLink} />
     </React.Fragment>
   )
 }

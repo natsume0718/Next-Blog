@@ -1,6 +1,7 @@
 import { NamedAvatar, NamedAvatarProps } from '../molecule/NamedAvatar'
 import { CreatedPosts, CreatedPostsProps } from '../atoms/CreatedPosts'
 import { Card } from '../atoms/Card'
+import { themeColor } from '../../config'
 
 export type Author = NamedAvatarProps & CreatedPostsProps
 
@@ -21,12 +22,13 @@ export function AuthorPosts({ authors }: AuthorProps) {
               }`}
             >
               <NamedAvatar
+                className={`text-${themeColor}-700 font-bold`}
                 src={author.src}
                 alt={author.alt}
                 circle={true}
                 name={author.name}
-              ></NamedAvatar>
-              <CreatedPosts counts={author.counts} className="ml-2"></CreatedPosts>
+              />
+              <CreatedPosts counts={author.counts} className="ml-2" />
             </li>
           )
         })}

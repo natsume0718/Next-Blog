@@ -7,5 +7,5 @@ export default {
   component: Avatar,
 } as Meta
 
-export const CircleAvatar: Story = () => <Avatar src="/man.jpeg" circle={true}></Avatar>
-export const DefaultAvatar: Story = () => <Avatar src="/man.jpeg"></Avatar>
+export const CircleAvatar: Story = () => <Avatar src="/man.jpeg" circle={true} />
+export const DefaultAvatar: Story = () => <Avatar src="/man.jpeg" />
