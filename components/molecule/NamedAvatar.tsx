@@ -1,6 +1,8 @@
 import { Avatar, AvatarProps } from '../atoms/Avatar'
 import Link from 'next/link'
 import React from 'react'
+import { themeColor } from '../../config'
+import { UnderLineBoldText } from '../atoms/UnderLineBoldText'
 
 export interface INamed {
   name: string
@@ -11,17 +13,14 @@ export interface INamed {
 export type NamedAvatarProps = INamed & AvatarProps
 
 export function NamedAvatar(props: NamedAvatarProps) {
-  const nameClass = `font-bold text-gray-700 hover:underline ${props.className}`
   return (
     <React.Fragment>
       <Avatar src={props.src} alt={props.alt} circle={props.circle}></Avatar>
-      {props.detailLink ? (
-        <Link href={props.detailLink}>
-          <a className={nameClass}>{props.name}</a>
-        </Link>
-      ) : (
-        <span className={nameClass}>{props.name}</span>
-      )}
+      <UnderLineBoldText
+        text={props.name}
+        className={props.className}
+        detailLink={props.detailLink}
+      ></UnderLineBoldText>
     </React.Fragment>
   )
 }
