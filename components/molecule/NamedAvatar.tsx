@@ -14,7 +14,11 @@ export function NamedAvatar(props: NamedAvatarProps) {
   return (
     <React.Fragment>
       <Avatar src={props.src} alt={props.alt} circle={props.circle}></Avatar>
-      <UnderLineText text={props.name} className={props.className} detailLink={props.detailLink} />
+      <UnderLineText
+        text={props.name}
+        className={`font-bold text-gray-700`}
+        detailLink={props.detailLink}
+      />
     </React.Fragment>
   )
 }

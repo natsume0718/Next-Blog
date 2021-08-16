@@ -1,7 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import { UnderLineText } from './UnderLineText'
-import { themeColor } from '../../config'
 
 export default {
   title: 'atoms/UnderLineText',
@@ -9,8 +8,8 @@ export default {
 } as Meta
 
 export const DefaultUnderLine: Story = () => (
-  <UnderLineText text="こんにちは" className={`text-${themeColor}-700`} />
+  <UnderLineText text="こんにちは" className={`text-gray-700`} />
 )
 export const DefaultUnderLineBold: Story = () => (
-  <UnderLineText text="こんにちは" className={`text-${themeColor}-700 font-bold`} />
+  <UnderLineText text="こんにちは" className={`text-gray-700 font-bold`} />
 )

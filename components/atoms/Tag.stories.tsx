@@ -6,13 +6,9 @@ export default {
   component: Tag,
 } as Meta
 
-export const DefaultTag: Story = () => (
-  <Tag text="Laravel" className="text-gray-100 bg-gray-600  hover:bg-gray-500" />
-)
+export const DefaultTag: Story = () => <Tag text="Laravel" />
 const s = (e: Event) => {
   const dom = e.target as HTMLButtonElement
   alert(dom.textContent)
 }
-export const EventTag: Story = () => (
-  <Tag text="Laravel" handleClick={s} className="text-gray-100 bg-gray-600  hover:bg-gray-500" />
-)
+export const EventTag: Story = () => <Tag text="Laravel" handleClick={s} />

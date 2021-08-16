@@ -1,15 +1,12 @@
-import colors from 'tailwindcss/colors'
-
 export interface FoldingProps {
   className?: string
-  color: keyof typeof colors
 }
 
-export function Folding({ color, className }: FoldingProps) {
+export function Folding({ className }: FoldingProps) {
   return (
     <button
       type="button"
-      className={`block text-${color}-800 hover:text-${color}-600 focus:text-${color}-600 focus:outline-none ${
+      className={`block text-gray-800 hover:text-gray-600 focus:text-gray-600 focus:outline-none ${
         className || ''
       }`}
     >
