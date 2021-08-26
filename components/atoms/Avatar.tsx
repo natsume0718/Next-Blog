@@ -12,11 +12,14 @@ export interface AvatarProps {
 
 export function Avatar({ src, alt, circle }: AvatarProps) {
   return (
-    <Image
-      src={src}
-      layout="fill"
-      alt={alt || 'avatar'}
-      className={`object-cover w-10 h-10 mx-4 ${circle ? 'rounded-full' : ''}`}
-    />
+    <span className="mx-4">
+      <Image
+        src={src}
+        width={40}
+        height={40}
+        alt={alt || 'avatar'}
+        className={`object-cover ${circle ? 'rounded-full' : ''}`}
+      />
+    </span>
   )
 }

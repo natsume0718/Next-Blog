@@ -6,18 +6,19 @@ export type Author = NamedAvatarProps & CreatedPostsProps
 
 export interface AuthorProps {
   authors: Author[]
+  className?: string
 }
 
-export function AuthorPosts({ authors }: AuthorProps) {
+export function AuthorPosts({ authors, className }: AuthorProps) {
   return (
-    <Card>
+    <Card className={className}>
       <ul className="flex flex-col items-start justify-center">
         {authors.map((author, index) => {
           return (
             <li
               key={index}
               className={`inline-flex list-none justify-center items-center ${
-                index !== 0 ? 'mt-6' : 'mt-6'
+                index !== 0 ? 'mt-6' : ''
               }`}
             >
               <NamedAvatar

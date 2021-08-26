@@ -3,11 +3,12 @@ import { UnderLineText } from '../atoms/UnderLineText'
 
 export interface CategoriesProps {
   categories: string[]
+  className?: string
 }
 
-export function Categories({ categories }: CategoriesProps) {
+export function Categories({ categories, className }: CategoriesProps) {
   return (
-    <Card>
+    <Card className={className}>
       <ul className="flex flex-col items-start justify-center">
         {categories.map((category, index) => {
           return (

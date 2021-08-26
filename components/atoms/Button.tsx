@@ -6,7 +6,7 @@ export interface ButtonProps {
 }
 
 export function Button({ className, disabled, text, handleClick }: ButtonProps) {
-  if (handleClick) {
+  if (typeof handleClick !== 'undefined') {
     return (
       <button
         className={`px-2 py-1 font-bold rounded

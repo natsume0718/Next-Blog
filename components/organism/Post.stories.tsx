@@ -14,7 +14,8 @@ export default {
 
 export const DefaultPost: Story = () => (
   <Post
-    author={author}
+    authorName={author.name}
+    authorSrc={author.src}
     date="2021-02-01"
     title="Laravel入門"
     description="Laravel is a web application framework with expressive, elegant syntax. We’ve already laid the foundation — freeing you to create without sweating the small things."
