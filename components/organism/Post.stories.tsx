@@ -14,6 +14,7 @@ export default {
 
 export const DefaultPost: Story = () => (
   <Post
+    tagName="Laravel"
     authorName={author.name}
     authorSrc={author.src}
     date="2021-02-01"
