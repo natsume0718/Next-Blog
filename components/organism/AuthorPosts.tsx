@@ -12,7 +12,7 @@ export interface AuthorProps {
 export function AuthorPosts({ authors, className }: AuthorProps) {
   return (
     <Card className={className}>
-      <ul className="flex flex-col items-start justify-center">
+      <ul className="-x-4 flex flex-col items-start justify-center">
         {authors.map((author, index) => {
           return (
             <li
