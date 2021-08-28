@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { NamedAvatar, NamedAvatarProps } from '../molecule/NamedAvatar'
+import { NamedAvatar } from '../molecule/NamedAvatar'
 import { Card } from '../atoms/Card'
 import dayjs from 'dayjs'
 import { UnderLineText } from '../atoms/UnderLineText'
