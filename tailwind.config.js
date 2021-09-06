@@ -1,8 +1,10 @@
-const colors = require('tailwindcss/colors');
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  purge: {
+    content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
+  },
   darkMode: 'class',
   theme: {
     extend: {
@@ -10,9 +12,4 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require('tailwindcss-filters')],
-  // xwind options
-  xwind: {
-    mode: 'objectstyles',
-  },
-};
+}
